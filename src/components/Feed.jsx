@@ -4,13 +4,37 @@ import {Stack , Box ,Typography} from "@mui/material"
 import Sidebar from './Sidebar'
 import Videos from "./Videos"
 import { fetchFromApi } from './utils/fetchFromApi'
+import axios from "axios"
 const Feed = () => {
     const [selectedCategory,setSelectedCategory] =useState('New')
     const [videos,setVideos] =useState([])
     useEffect(() => {
-        fetchFromApi(`${selectedCategory}`)
-        .then((data)=>setVideos(data.items))
-        
+        // fetchFromApi(`${selectedCategory}`)
+        // .then((data)=>setVideos(data.items))
+        const options = {
+            method: 'GET',
+            url: `https://youtube-v31.p.rapidapi.com/search`,
+            params: {
+              
+              q:selectedCategory,
+              part: 'snippet,id',
+              regionCode: 'US',
+              maxResults: '50',
+              order: 'date'
+            },
+            headers: {
+              'X-RapidAPI-Key': 'eea2323f1amshd73156367368367p1a2e17jsn4ff6e884e13f',
+              'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+            }
+          };
+          
+          console.log(selectedCategory);
+          axios.request(options).then(function (response) {
+              console.log();
+              setVideos(response.data.items)
+          }).catch(function (error) {
+              console.error(error);
+          });
         
     },[selectedCategory])
   return (
