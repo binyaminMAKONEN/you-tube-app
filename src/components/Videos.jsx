@@ -16,7 +16,7 @@ const Videos = ({videos}) => {
 
         <Box key={idx}>
             {item.id.videoId &&  <VideoCard video={item}/>}
-            {/* {item.id.channelId && <ChannelCard channelDetail={item}/>} */}
+            {item.snippet.channelId && <ChannelCard channelDetail={item}/>}
         </Box>
         ))}
     </Stack>
