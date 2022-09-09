@@ -12,7 +12,8 @@ const ChannelCard = ({ channelDetail }) => {
             alignItems:'center',
             width: { sx: "356px", md: "320px" },
             height: "326px",
-            margin:'auto'
+            margin:'auto',
+            marginTop:'-110px'
     }}>
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
         <CardContent
