@@ -6,27 +6,29 @@ import Videos from "./Videos";
 import ChannelCard from "./ChannelCard";
 import { fetchFromApi } from "./utils/fetchFromApi";
 import axios from "axios";
+import { demoProfilePicture } from "./utils/constants";
 
 const ChannelDetail = () => {
   const { id } = useParams();
   const [channelDetail, setChannelDetail] = useState(null);
   const [video, setVideo] = useState([]);
-  console.log(channelDetail);
+  // console.log(channelDetail);
   useEffect(() => {
     const options = {
       method: "GET",
       url: "https://youtube-v31.p.rapidapi.com/channels",
       params: { part: "snippet,statistics", id: id },
       headers: {
-        "X-RapidAPI-Key": "eea2323f1amshd73156367368367p1a2e17jsn4ff6e884e13f",
-        "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+        'X-RapidAPI-Key': '5de0722db1msh3b14a48dea3e7a1p15c8bajsn2288cf021295',
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    
       },
     };
 
     axios
       .request(options)
       .then(function (response) {
-        console.log(response?.data?.items[0]);
+        // console.log(response?.data?.items[0]);
         setChannelDetail(response?.data?.items[0]);
       })
       .catch(function (error) {
@@ -43,15 +45,16 @@ const ChannelDetail = () => {
         maxResults: "50",
       },
       headers: {
-        "X-RapidAPI-Key": "eea2323f1amshd73156367368367p1a2e17jsn4ff6e884e13f",
-        "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+        'X-RapidAPI-Key': '5de0722db1msh3b14a48dea3e7a1p15c8bajsn2288cf021295',
+        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+    
       },
     };
 
     axios
       .request(option)
       .then(function (response) {
-        console.log(response?.data?.items);
+        // console.log(response?.data?.items);
         setVideo(response?.data?.items);
       })
       .catch(function (error) {
@@ -63,10 +66,17 @@ const ChannelDetail = () => {
       <Box>
         <div
           style={{
-            background:
-              "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)",
+            backgroundImage:` url(${channelDetail?.snippet?.thumbnails?.high?.url ||
+              demoProfilePicture})`
+            ,
+            backgroundSize: 'cover',
+            backgroundPosition: '50% 50%',
+            // backgroundSize:'100% 100%',
+            backgroundRepeat:'no-repeat',
+            // background:
+            //   "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)",
             zIndex: 10,
-            height: "300px",
+            height: "400px",
           }}
         />
         <ChannelCard channelDetail={channelDetail} />

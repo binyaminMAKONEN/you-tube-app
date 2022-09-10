@@ -24,13 +24,14 @@ const SearchFeed = () => {
             order: 'date'
           },
           headers: {
-            'X-RapidAPI-Key': 'eea2323f1amshd73156367368367p1a2e17jsn4ff6e884e13f',
+            'X-RapidAPI-Key': '5de0722db1msh3b14a48dea3e7a1p15c8bajsn2288cf021295',
             'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
+        
           }
         };
         
         axios.request(options).then(function (response) {
-            console.log(response.data.items);
+            // console.log(response.data.items);
             setVideos(response.data.items)
         }).catch(function (error) {
             console.error(error);
