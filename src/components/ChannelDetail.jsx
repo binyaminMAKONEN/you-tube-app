@@ -19,7 +19,7 @@ const ChannelDetail = () => {
       url: "https://youtube-v31.p.rapidapi.com/channels",
       params: { part: "snippet,statistics", id: id },
       headers: {
-        'X-RapidAPI-Key': '5de0722db1msh3b14a48dea3e7a1p15c8bajsn2288cf021295',
+        'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     
       },
@@ -45,7 +45,7 @@ const ChannelDetail = () => {
         maxResults: "50",
       },
       headers: {
-        'X-RapidAPI-Key': '5de0722db1msh3b14a48dea3e7a1p15c8bajsn2288cf021295',
+        'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     
       },
