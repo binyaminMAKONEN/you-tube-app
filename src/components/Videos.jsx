@@ -4,7 +4,7 @@ import VideoCard from './VideoCard';
 import ChannelCard from './ChannelCard';
 
 const Videos = ({videos,direction}) => {
-    // console.log(videos);
+    console.log(videos);
   return (
     <Stack
     direction={direction ||"row"}
@@ -16,7 +16,7 @@ const Videos = ({videos,direction}) => {
 
         <Box key={idx} >
             {item.id.videoId &&  <VideoCard video={item}/>}
-            {/* {item.snippet.channelId && <ChannelCard channelDetail={item}/>} */}
+            {/* {item.id.channelId && <ChannelCard channelDetail={item}/>} */}
         </Box>
         ))}
     </Stack>
