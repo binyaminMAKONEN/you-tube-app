@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import { Typography, Stack, Box } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import Videos from "./Videos";
-import axios from "axios";
+import { fetchFromApi } from "./utils/fetchFromApi";
 
 const VideoDetail = () => {
   const { id } = useParams();
@@ -13,53 +13,19 @@ const VideoDetail = () => {
   const [video, setVideo] = useState([]);
 
   useEffect(() => {
-    const options = {
-      method: "GET",
-      url: "https://youtube-v31.p.rapidapi.com/videos",
-      params: { part: "contentDetails,snippet,statistics", id: id },
-      headers: {
-        'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
-        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-      },
-    };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        console.log(response?.data?.items[0]);
-        setVideoDetail(response?.data?.items[0]);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-      //
-      const option = {
-        method: 'GET',
-        url: 'https://youtube-v31.p.rapidapi.com/search',
-        params: {
-          relatedToVideoId: id,
-          part: 'id,snippet',
-          type: 'video',
-          maxResults: '50'
-        },
-        headers: {
-          'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
-          'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-        }
-      };
-      
-      axios.request(option).then(function (response) {
-        console.log(response.data.items);
-        setVideo(response?.data?.items)
-      }).catch(function (error) {
-        console.error(error);
-      });
+    fetchFromApi(`videos?part=snippet,statistics&id=${id}`)
+      .then((data) => setVideoDetail(data.items[0]))
+
+    fetchFromApi(`search?part=snippet&relatedToVideoId=${id}&type=video`)
+      .then((data) => setVideo(data.items))
   }, [id]);
   if(!videoDetail?.snippet)return "Loading..."
   const {
     snippet: { title, channelId, channelTitle },
     statistics: { viewCount, likeCount },
   } = videoDetail;
+  console.log(videoDetail);
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>

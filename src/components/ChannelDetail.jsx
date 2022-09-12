@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 import {Videos,ChannelCard} from "./utils/component";
 import { fetchFromApi } from "./utils/fetchFromApi";
-import axios from "axios";
 import { demoProfilePicture } from "./utils/constants";
 
 const ChannelDetail = () => {
@@ -13,52 +12,15 @@ const ChannelDetail = () => {
   const [video, setVideo] = useState([]);
   // console.log(channelDetail);
   useEffect(() => {
-    const options = {
-      method: "GET",
-      url: "https://youtube-v31.p.rapidapi.com/channels",
-      params: { part: "snippet,statistics", id: id },
-      headers: {
-        'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
-        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-    
-      },
+    const fetchResults = async () => {
+      const data = await fetchFromApi(`channels?part=snippet&id=${id}`);
+      setChannelDetail(data?.items[0]);
+
+      const videosData = await fetchFromApi(`search?channelId=${id}&part=snippet%2Cid&order=date`);
+      setVideo(videosData?.items);
     };
 
-    axios
-      .request(options)
-      .then(function (response) {
-        // console.log(response?.data?.items[0]);
-        setChannelDetail(response?.data?.items[0]);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-
-    const option = {
-      method: "GET",
-      url: "https://youtube-v31.p.rapidapi.com/search",
-      params: {
-        channelId: id,
-        part: "snippet,id",
-        order: "date",
-        maxResults: "50",
-      },
-      headers: {
-        'X-RapidAPI-Key': '094d143fe1msh82a8b910961974ap14d86fjsn7d7f23b8f895',
-        'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-    
-      },
-    };
-
-    axios
-      .request(option)
-      .then(function (response) {
-        // console.log(response?.data?.items);
-        setVideo(response?.data?.items);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    fetchResults();
   }, [id]);
   return (
     <Box minHeight="95vh">
