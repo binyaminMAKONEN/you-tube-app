@@ -1,7 +1,6 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+# youtube-app.
+An application for watching videos uploaded by a YouTube user
+You can find every video that appears on YouTube
 ## Available Scripts
 
 In the project directory, you can run:
@@ -14,57 +13,40 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## package
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Router [https://www.npmjs.com/package/react-router](https://www.npmjs.com/package/react-router)<br/>
+material ui [https://mui.com/system/getting-started/installation/](https://mui.com/system/getting-started/installation/)<br/>
+axios [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
 
-### `npm run build`
+<img src="https://user-images.githubusercontent.com/101037019/190003359-3ac213f9-714f-4a9b-bc2a-ef746f126821.png"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## `Feed`
+<img src="https://user-images.githubusercontent.com/101037019/189981085-a1fad93e-e247-4df4-aee3-b1c6f4784d3d.png" />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `CahnnelDetails`
 
-### `npm run eject`
+<img src="https://user-images.githubusercontent.com/101037019/189981980-711e87e0-3d30-4f29-846e-138c30c47614.png" />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## `VideoDetails`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://user-images.githubusercontent.com/101037019/189997307-5edeeb46-7491-4311-8385-5127bbd66ec0.png"/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## `Responsiv`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img src="https://user-images.githubusercontent.com/101037019/189997589-9a2d2a17-3499-4e32-82b8-423ee6ce173a.png" width="30%" align="right"/>
+<img src="https://user-images.githubusercontent.com/101037019/189999459-083e0f95-bb4a-4fd8-8a67-680dbe874793.png" width="30%" align="right"/>
+<img src="https://user-images.githubusercontent.com/101037019/189999603-daeb7b4f-9b05-4790-9583-84113247a07e.png" width="30%"/>
+                                                                                                                                            
+                                                                                                                                            
+## Note 
 
-## Learn More
+If you try to run the application and you don't see any video
+go to [Rapid](https://rapidapi.com/ytdlfree/api/youtube-v3-alternative/)
+and copy the api key you get and replace the old url in the new one
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://user-images.githubusercontent.com/101037019/190012830-1083b33d-919a-4545-94b3-8cf918cafe67.png"/>
+                                                                                                                                            
+                                                                                                                                           
