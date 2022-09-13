@@ -9,13 +9,9 @@ import {
   demoChannelTitle,
   demoVideoTitle,
 } from "./utils/constants";
-const VideoCard = ({
-  video: {
-    id: { videoId },
-    snippet,
-  },
+const VideoCard = ({video: { id: { videoId }, snippet, },
 }) => {
-  // console.log(videoId,snippet.title);
+  console.log(snippet);
   return (
     <Card sx={{width:{sx:'100%',sm:'358px',md:300,boxShadow:'none',borderRadius:0}}}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
@@ -42,6 +38,7 @@ const VideoCard = ({
             {snippet?.channelTitle.slice(0, 60) || demoVideoTitle.slice(0, 60)}
             <CheckCircle sx={{fontSize:12,color:'gray',ml:'5px'}}/>
           </Typography>
+         
         </Link>
       </CardContent>
     </Card>

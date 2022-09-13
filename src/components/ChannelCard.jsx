@@ -3,7 +3,7 @@ import { Box, Typography, CardContent, CardMedia } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { demoProfilePicture } from "../components/utils/constants";
-const ChannelCard = ({ channelDetail }) => {
+const ChannelCard = ({ channelDetail,height }) => {
   return (
     <Box sx={{ boxShadow: "none", borderRadius: "20px",
     display: "flex",
@@ -36,7 +36,7 @@ const ChannelCard = ({ channelDetail }) => {
             alt={channelDetail?.snippet?.title}
             sx={{
               borderRadius: "50%",
-              height: "180px",
+              height:"180px",
               width: "180px",
               mb: 2,
               border: "1px solid #e3e3e3",
