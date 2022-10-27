@@ -7,6 +7,7 @@ import { fetchFromApi } from './utils/fetchFromApi'
 const Feed = () => {
     const [selectedCategory,setSelectedCategory] =useState('New')
     const [videos,setVideos] =useState([])
+    
     useEffect(() => {
         fetchFromApi(`search?part=snippet&q=${selectedCategory}`)
         .then((data) => setVideos(data.items))
