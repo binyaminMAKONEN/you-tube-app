@@ -1,25 +1,57 @@
-# youtube-app.
-An application for watching videos uploaded by a YouTube user
-You can find every video that appears on YouTube
-## Available Scripts
+# YouTube Clone Application
 
-In the project directory, you can run:
+## Overview
+This application is a clone of the popular video-sharing platform YouTube. It allows users to browse and watch videos, as well as search for specific videos using keywords. The app is built using the React library for the frontend and makes use of the RapidAPI service for the backend, including integration with the YouTube API. The app uses the Material-UI library for the user interface.
 
-### `npm start`
+## Features
+- Browse and watch videos
+- Search for videos using keywords
+- React for efficient and interactive user experience
+- RapidAPI for backend functionality and integration with the YouTube API
+- Material-UI for modern and consistent user interface design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Details
+- Frontend: React library
+- Backend: RapidAPI service 
+- Integration with YouTube API
+- User Interface: Material-UI library
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo
+The application is hosted on https://you-tube-di7vs3wae-binyaminmakonen.vercel.app/
 
-## package
+## Setup
+1. Clone the repository
+git clone https://github.com/[username]/youtube-clone-app.git
 
-React Router [https://www.npmjs.com/package/react-router](https://www.npmjs.com/package/react-router)<br/>
-material ui [https://mui.com/system/getting-started/installation/](https://mui.com/system/getting-started/installation/)<br/>
-axios [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
+2. Install dependencies
+npm install
 
-<img src="https://user-images.githubusercontent.com/101037019/190003359-3ac213f9-714f-4a9b-bc2a-ef746f126821.png"/>
+
+3. Start the development server
+npm start
+
+
+4. Open http://localhost:3000 in your browser to view the app.
+
+## Usage
+1. Browse and watch videos on the home page
+2. Search for specific videos using keywords in the search bar
+
+## Contribution
+If you want to contribute to the project, please follow the steps:
+
+1. Fork the repository
+2. Create a new branch for your feature (git checkout -b my-feature)
+3. Commit your changes (git commit -am 'Add my feature')
+4. Push to the branch (git push origin my-feature)
+5. Create a new pull request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Conclusion
+This project is an open-source YouTube clone application that can be used by anyone. It's built using React and makes use of RapidAPI service for the backend functionality and integration with the YouTube API. It uses Material-UI for
+
 
 ## Design
 
@@ -41,12 +73,6 @@ axios [https://www.npmjs.com/package/axios](https://www.npmjs.com/package/axios)
 <img src="https://user-images.githubusercontent.com/101037019/189999603-daeb7b4f-9b05-4790-9583-84113247a07e.png" width="30%"/>
                                                                                                                                             
                                                                                                                                             
-## Note 
 
-If you try to run the application and you don't see any video
-go to [Rapid](https://rapidapi.com/ytdlfree/api/youtube-v3-alternative/)
-and copy the api key you get and replace the old url in the new one
-
-<img src="https://user-images.githubusercontent.com/101037019/190012830-1083b33d-919a-4545-94b3-8cf918cafe67.png"/>
                                                                                                                                             
                                                                                                                                            
