@@ -21,7 +21,7 @@ The application is hosted on https://you-tube-di7vs3wae-binyaminmakonen.vercel.a
 
 ## Setup
 1. Clone the repository
-git clone https://github.com/[username]/youtube-clone-app.git
+git clone https://github.com/binyaminMAKONEN/you-tube-app.git
 
 2. Install dependencies
 npm install
@@ -46,8 +46,6 @@ If you want to contribute to the project, please follow the steps:
 4. Push to the branch (git push origin my-feature)
 5. Create a new pull request
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Conclusion
 This project is an open-source YouTube clone application that can be used by anyone. It's built using React and makes use of RapidAPI service for the backend functionality and integration with the YouTube API. It uses Material-UI for
